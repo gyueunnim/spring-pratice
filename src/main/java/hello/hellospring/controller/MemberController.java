@@ -10,7 +10,7 @@ public class MemberController {
 
     private final MemberService memberService;
 
-    // 생성자 주입 -> 가장 권장
+    // 생성자 주입 -> 가장 권장, 생성 시 객체 결정
     @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
@@ -21,9 +21,8 @@ public class MemberController {
 
 //    다른 방식 - 세터 주입 -> 중간에 잘못 바뀔 우려
 //    private MemberService memberService;
-//
 //    @Autowired
-//    public MemberController(MemberService memberService) {
+//    public void setMemberController(MemberService memberService) { // Setter 호출
 //        this.memberService = memberService;
 //    }
 }
